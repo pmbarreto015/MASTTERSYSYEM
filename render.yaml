@@ -1,0 +1,24 @@
+# Blueprint path: deploy/licensing/render.yaml
+# Render termina HTTPS; o app recebe PORT automaticamente.
+services:
+  - type: web
+    name: mastter-licencas
+    runtime: docker
+    plan: 0.5c-512mb
+    region: virginia
+    dockerContext: .
+    dockerfilePath: ./deploy/licensing/Dockerfile
+    healthCheckPath: /health
+    numInstances: 1
+    autoDeployTrigger: off
+    envVars:
+      - key: LICENSE_DATA_FILE
+        value: /var/data/lan_licenses.json
+      - key: LICENSE_ADMIN_TOKEN
+        generateValue: true
+      - key: LICENSE_TRUST_PROXY
+        value: "1"
+    disk:
+      name: licenses
+      mountPath: /var/data
+      sizeGB: 1

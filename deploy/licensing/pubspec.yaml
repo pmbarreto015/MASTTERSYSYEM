@@ -1,0 +1,7 @@
+name: mastter_license_server
+description: Servidor independente de licenças MastterSystem.
+publish_to: none
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+dependencies:
+  crypto: ^3.0.7

@@ -1,0 +1,18 @@
+# Allowlist: no customer databases, signing keys, assets or installers enter
+# the Docker build context. Applies specifically to this Dockerfile.
+**
+!deploy/
+deploy/**
+!deploy/licensing/
+deploy/licensing/**
+!deploy/licensing/Dockerfile
+!deploy/licensing/Dockerfile.dockerignore
+!deploy/licensing/pubspec.yaml
+!lib/
+lib/**
+!lib/services/
+lib/services/**
+!lib/services/license_server_core.dart
+!tool/
+tool/**
+!tool/servidor_licencas.dart
