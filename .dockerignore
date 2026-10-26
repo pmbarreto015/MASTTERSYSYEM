@@ -1,0 +1,14 @@
+**
+!deploy/
+deploy/**
+!deploy/licensing/
+deploy/licensing/**
+!deploy/licensing/pubspec.yaml
+!lib/
+lib/**
+!lib/services/
+lib/services/**
+!lib/services/license_server_core.dart
+!tool/
+tool/**
+!tool/servidor_licencas.dart
